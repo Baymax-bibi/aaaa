@@ -1,0 +1,235 @@
+# TO deny access
+<files wp-config.php>
+order allow,deny
+deny from all
+</files>
+# SEO - XML Sitemap Rewrite Fix
+RewriteEngine On
+RewriteBase /
+RewriteRule ^sitemap_index.xml$ /index.php?sitemap=1 [L]
+RewriteRule ^locations.kml$ /index.php?sitemap=wpseo_local_kml [L]
+RewriteRule ^geo_sitemap.xml$ /index.php?sitemap=geo [L]
+RewriteRule ^([^/]+?)-sitemap([0-9]+)?.xml$ /index.php?sitemap=$1&sitemap_n=$2 [L]
+RewriteRule ^([a-z]+)?-?sitemap.xsl$ /index.php?xsl=$1 [L]
+# END SEO - XML Sitemap Rewrite Fix<br>
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+#RewriteRule ^smile-gallery/(.*)/(.*)/$ wp-content/themes/david-silberman/photo-gallery-detail.php?catid=$1&subid=$2
+#RewriteRule ^smile-gallery/(.*)/$ wp-content/themes/david-silberman/smile-gallery.php?subid=$1
+RewriteCond %{HTTP_HOST}  ^www\.shorttermbraces\.com$ [NC]
+RewriteCond %{QUERY_STRING}  ^filename=1319178284733775259coding_standards\.doc(&.*)?$ [NC]
+RewriteRule ^wp-content/themes/shorttermbraces/download\.php$ http://www.shorttermbraces.com/?%1 [R=301,NE,NC,L]
+RewriteCond %{HTTP_HOST}  ^www\.shorttermbraces\.com$ [NC]
+RewriteCond %{QUERY_STRING}  ^filename=13407664721256961746Flossing\.doc(&.*)?$ [NC]
+RewriteRule ^wp-content/themes/shorttermbraces/download\.php$ http://www.shorttermbraces.com/?%1 [R=301,NE,NC,L]
+RewriteCond %{HTTP_HOST}  ^www\.shorttermbraces\.com$ [NC]
+RewriteCond %{QUERY_STRING}  ^filename=13312431201885602095Bruxism\.doc(&.*)?$ [NC]
+RewriteRule ^wp-content/themes/shorttermbraces/download\.php$ http://www.shorttermbraces.com/?%1 [R=301,NE,NC,L]
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# BEGIN rlrssslReallySimpleSSL rsssl_version[3.1.5]
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{HTTPS} !=on [NC]
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+</IfModule>
+# END rlrssslReallySimpleSSL
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+# END WordPress
+#5
+Redirect "/wp-content/themes/shorttermbraces/videos/VNR2001 for Dial-up.swf" http://www.shorttermbraces.com/
+redirect 301 /wp-content/themes/shorttermbraces/pdf/ebook.pdf http://www.shorttermbraces.com/wp-content/themes/david-silberman/pdf/ebook.pdf
+#4
+redirect 301 /wp-content/themes/shorttermbraces/download.php?filename=13407664721256961746Flossing.doc	http://www.shorttermbraces.com/
+redirect 301 /wp-content/themes/shorttermbraces/download.php?filename=1319178284733775259coding_standards.docx http://www.shorttermbraces.com/
+redirect 301 /patient-info/post-treatment-instructions/after-procelain-veneers-procedure-houston-tx/ http://www.shorttermbraces.com/patient-info/post-treatment-instructions/after-veneers/
+redirect 301 /patient-info/post-treatment-instructions/after-root-canal-treatment-houston-tx/ http://www.shorttermbraces.com/patient-info/post-treatment-instructions/after-root-canal/
+redirect 301 /patient-info/post-treatment-instructions/after-bleaching-process-houston-tx http://www.shorttermbraces.com/patient-info/post-treatment-instructions/after-bleaching/
+redirect 301 /patient-info/post-treatment-instructions/post-dentures-houston-tx/ http://www.shorttermbraces.com/patient-info/post-treatment-instructions/after-dentures/
+redirect 301 /patient-info/technology/in-the-mouth-camera-houston-tx/ http://www.shorttermbraces.com/patient-info/technology/in-the-mouth-camera/
+redirect 301 /patient-info/technology/cerec-one-visit-crowns-houston-tx/ http://www.shorttermbraces.com/
+redirect 301 /patient-info/post-treatment-instructions/after-orthodontics-treatment-houston-tx http://www.shorttermbraces.com/patient-info/post-treatment-instructions/after-orthodontics/
+redirect 301 /wp-content/downloads/patient_forms.pdf http://www.shorttermbraces.com/wp-content/themes/david-silberman/pdf/patient_forms.pdf
+redirect 301 /patient-info/post-treatment-instructions/bite-splint-therapy-houston-tx/	 http://www.shorttermbraces.com/patient-info/post-treatment-instructions/bite-splint/
+redirect 301 /patient-info/post-treatment-instructions/after-dental-implants-houston-tx http://www.shorttermbraces.com/patient-info/post-treatment-instructions/after-implants/
+redirect 301 /wp-content/plugins/before_after/ http://www.shorttermbraces.com/
+redirect 301 /patient-info/technology/laser-cavity-detection-houston-tx/ http://www.shorttermbraces.com/patient-info/technology/laser-cavity-detection/
+redirect 301 /patient-info/post-treatment-instructions/after-periodontics-houston-tx/ http://www.shorttermbraces.com/patient-info/post-treatment-instructions/after-periodontics/
+redirect 301 /services/orthodontics/short-term-braces-houston-tx/ http://www.shorttermbraces.com/services/short-term-braces/
+redirect 301 /services/orthodontics/short-term-braces-houston-tx/ http://www.shorttermbraces.com/services/short-term-braces/
+redirect 301 /services/orthodontics/invisalign-houston-tx/ http://www.shorttermbraces.com/services/invisalign/
+redirect 301 /patient-info/post-treatment-instructions/after-procelain-veneers-procedure-houston-tx/ http://www.shorttermbraces.com/patient-info/post-treatment-instructions/after-veneers/
+redirect 301 /patient-info/post-treatment-instructions/bite-splint-therapy-houston-tx http://www.shorttermbraces.com/patient-info/post-treatment-instructions/bite-splint/
+redirect 301 /news/page/2/ http://www.shorttermbraces.com/blog/
+redirect 301 /patient-info/technology/cerec-one-visit-crowns-houston-tx/ http://www.shorttermbraces.com/patient-info/technology/laser-cavity-detection/
+redirect 301 /services/orthodontics/comprehensive-braces/ http://www.shorttermbraces.com/services/comprehensive-orthodontics/
+redirect 301 /services/orthodontics/short-term-braces-houston-tx/ http://www.shorttermbraces.com/services/short-term-braces/
+redirect 301 /patient-info/post-treatment-instructions/after-root-canal-treatment-houston-tx/ http://www.shorttermbraces.com/patient-info/post-treatment-instructions/after-root-canal/
+redirect 301 /patient-info/technology/laser-cavity-detection-houston-tx/ http://www.shorttermbraces.com/patient-info/technology/laser-cavity-detection/
+redirect 301 /wp-content/downloads/privacy_document.pdf http://www.shorttermbraces.com/wp-content/themes/david-silberman/pdf/privacy_document.pdf
+#2
+redirect 301 /dental-services/dentistry-for-kids.htm http://www.shorttermbraces.com/services/dentistry-for-children-young-adults/
+redirect 301 /services/dental-implants-houston-tx/ http://www.shorttermbraces.com/services/implant/
+redirect 301 /services/one-visit-crowns/ http://www.shorttermbraces.com/services/
+redirect 301 /ptinfo/postbleaching.htm http://www.shorttermbraces.com/
+redirect 301 /services/restorative.htm http://www.shorttermbraces.com/services/
+redirect 301 /comportho/problems.htm http://www.shorttermbraces.com/comprehensive-orthodontics/orthodontic-problems/
+redirect 301 /6monthbraces/ebook.htm http://www.shorttermbraces.com/6-month-braces/download-e-book/
+redirect 301 /cosmetic-dentistry/veneers/ http://www.shorttermbraces.com/cosmetic-dentistry/veneers-crowns/
+redirect 301 /ptinfo/bitesplint.htm http://www.shorttermbraces.com/
+redirect 301 /services/orthodontics/ http://www.shorttermbraces.com/services/
+redirect 301 /patient-info/home-dental-care-instructions-houston-tx/ http://www.shorttermbraces.com/patient-info/home-care-instructions/
+redirect 301 /comprehensive-orthodontics/what-is-comprehensive-orthodontic-treatment-houston-tx/ http://www.shorttermbraces.com/comprehensive-orthodontics/what-is-it/
+redirect 301 /6-month-braces-houston-tx/download-orthodontics-e-book/ http://www.shorttermbraces.com/6-month-braces/download-e-book/
+redirect 301 /6-month-braces-houston-tx/dental-photo-gallery/ http://www.shorttermbraces.com/6-month-braces/photo-gallery/
+redirect 301 /services/dentistry-for-kids-houston-tx/ http://www.shorttermbraces.com/services/dentistry-for-children-young-adults/
+redirect 301 /comprehensive-orthodontics/braces-benefits-houston-tx/ http://www.shorttermbraces.com/comprehensive-orthodontics/benefits-of-braces/
+redirect 301 /patient-info/dental-insurance-financial-houston-tx/ http://www.shorttermbraces.com/patient-info/insurancefinancial/
+redirect 301 /6-month-braces-houston-tx/dental-photo-gallery/ http://www.shorttermbraces.com/6-month-braces/photo-gallery/
+redirect 301 /services/joint-muscle-treatment-houston-tx/ http://www.shorttermbraces.com/services/jointmuscle-treatment/
+redirect 301 /news/dental-implants/ http://www.shorttermbraces.com/services/jointmuscle-treatment/
+redirect 301 /news/dental-lasers/ http://www.shorttermbraces.com/blog/general-category/dental-lasers/
+redirect 301 /cosmetic-dentistry/veneers-houston-tx/ http://www.shorttermbraces.com/cosmetic-dentistry/veneers-crowns/
+redirect 301 /services/root-canal-treatment-houston-tx/ http://www.shorttermbraces.com/services/root-canal/
+redirect 301 /cosmetic-dentistry/tooth-whitening-houston-tx/ http://www.shorttermbraces.com/cosmetic-dentistry/tooth-whitening/
+redirect 301 /comprehensive-orthodontics/orthodontic-problems-houston-tx/ http://www.shorttermbraces.com/comprehensive-orthodontics/orthodontic-problems/
+redirect 301 /services/digital-records-houston-tx/ http://www.shorttermbraces.com/services/digital-x-rays-and-records/
+redirect 301 /news/regarding-silver-fillings/ http://www.shorttermbraces.com/blog/general-category/regarding-silver-fillings/
+redirect 301 /services/one-visit-crowns-houston-tx/ http://www.shorttermbraces.com/cosmetic-dentistry/veneers-crowns/
+redirect 301 /news/allergies-and-dentistry/ http://www.shorttermbraces.com/blog/general-category/allergies-and-dentistry/
+redirect 301 /dental-services/tmj.htm http://www.shorttermbraces.com/cosmetic-dentistry/tooth-whitening/
+redirect 301 /news/grinding-and-clenching/ http://www.shorttermbraces.com/blog/general-category/grinding-and-clenching/
+redirect 301 /news/feed/ http://www.shorttermbraces.com/feed/
+redirect 301 /cosmetic-dentistry/cosmetic-periodontics-houston-tx/ http://www.shorttermbraces.com/
+redirect 301 /services/dentistry-for-kids-houston-tx/ http://www.shorttermbraces.com/services/dentistry-for-children-young-adults/
+redirect 301 /news/what-is-a-crown/ http://www.shorttermbraces.com/blog/general-category/what-is-a-crown/
+redirect 301 /news/is-dental-floss-necessary/ http://www.shorttermbraces.com/blog/general-category/is-dental-floss-necessary/
+redirect 301 /news/mouth-guards-and-splints/ http://www.shorttermbraces.com/blog/general-category/mouth-guards-and-splints/
+redirect 301 /services/gum-treatment-houston-tx/ http://www.shorttermbraces.com/services/gum-treatment/
+redirect 301 /comprehensive-orthodontics/braces-benefits-houston-tx/ http://www.shorttermbraces.com/comprehensive-orthodontics/benefits-of-brace
+redirect 301 /patient-info/home-dental-care-instructions-houston-tx/ http://www.shorttermbraces.com/patient-info/home-care-instructions/
+redirect 301 /uncategorized/hello-world/ http://www.shorttermbraces.com
+redirect 301 /6-month-braces-houston-tx/overview/ http://www.shorttermbraces.com/6-month-braces/overview/
+redirect 301 /6-month-braces-houston-tx/faq/ http://www.shorttermbraces.com/6-month-braces/faq/
+redirect 301 /services/digital-x-rays-houston-tx/ http://www.shorttermbraces.com/services/digital-x-rays-and-records/
+redirect 301 /services/laser-dental-treatment-houston-tx/ http://www.shorttermbraces.com/patient-info/technology/laser-cavity-detection/
+redirect 301 /services/dental-cavity-treatment-houston-tx/ http://www.shorttermbraces.com/services/cavity-treatment/
+redirect 301 /cosmetic-dentistry/smile-makeover-houston-tx/ http://www.shorttermbraces.com/cosmetic-dentistry/smile-make-over/
+#1
+redirect 301  /Shorttermbraces/  http://www.shorttermbraces.com/
+redirect 301 /dr-david-silberman-will-help-you-to-get-the-beautiful-smile-you-always-dreamed-of/ http://www.shorttermbraces.com/
+redirect 301 /news/ http://www.shorttermbraces.com/blog/
+redirect 301 /gallery/ http://www.shorttermbraces.com/smile-gallery/
+redirect 301 /before-after-gallery/ http://www.shorttermbraces.com/smile-gallery/
+redirect 301 /gallery-2/ http://www.shorttermbraces.com/smile-gallery/
+##Moblie Redirection
+redirect 301 http://m.shorttermbraces.com/Shorttermbraces/Pages/1406/veneers http://www.shorttermbraces.com/cosmetic-dentistry/veneers-crowns/
+redirect 301 http://m.shorttermbraces.com/Shorttermbraces/Contact/1410/contact-us http://www.shorttermbraces.com/contact-us/location/
+redirect 301 http://m.shorttermbraces.com/Shorttermbraces/Pages/1424/tooth-whitening http://www.shorttermbraces.com/cosmetic-dentistry/tooth-whitening/
+redirect 301 http://m.shorttermbraces.com/Shorttermbraces/Pages/1425/other-services http://www.shorttermbraces.com/
+redirect 301 http://m.shorttermbraces.com/Shorttermbraces/Pages/1405/short-term-braces http://www.shorttermbraces.com/services/short-term-braces/
+redirect 301 http://m.shorttermbraces.com/Shorttermbraces/Pages/1404/about-the-practice http://www.shorttermbraces.com/about/about-the-practice/
+redirect 301 http://m.shorttermbraces.com/Shorttermbraces/External-link/1452/image-gallery http://www.shorttermbraces.com/smile-gallery/
+#########################custom added code for pagespeed on 01-06-2015####################################################
+###caching###
+# 1 YEAR
+ExpiresActive On
+<FilesMatch "\.(otf|ico|pdf|flv)$">
+Header set Cache-Control "max-age=29030400, public"
+ExpiresDefault "access plus 1 years"
+Header unset Last-Modified
+Header unset ETag
+SetOutputFilter DEFLATE
+</FilesMatch>
+# 1 MONTHS
+<FilesMatch "\.(jpg|jpeg|png|gif|swf)$">
+Header set Cache-Control "max-age=2419200, public"
+ExpiresDefault "access plus 1 month"
+SetOutputFilter DEFLATE
+</FilesMatch>
+<FilesMatch "\.(xml|txt|css|js)$">
+Header set Cache-Control "max-age=604800, public"
+ExpiresDefault "access plus 1 week"
+SetOutputFilter DEFLATE
+</FilesMatch>
+# 30 MIN
+<FilesMatch "\.(html|htm|php)$">
+SetOutputFilter DEFLATE
+</FilesMatch>
+## EXPIRES CACHING ##
+# BEGIN Expires
+<ifModule mod_expires.c>
+ExpiresActive On
+ExpiresDefault "access plus 1 seconds"
+ExpiresByType text/html "access plus 1 seconds"
+ExpiresByType image/gif "access plus 2592000 seconds"
+ExpiresByType image/jpeg "access plus 2592000 seconds"
+ExpiresByType image/png "access plus 2592000 seconds"
+ExpiresByType text/css "access plus 604800 seconds"
+ExpiresByType text/javascript "access plus 216000 seconds"
+ExpiresByType application/x-javascript "access plus 216000 seconds"
+</ifModule>
+# END Expires
+###########################################################################
+# Enable Compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+  AddOutputFilterByType DEFLATE application/x-font
+  AddOutputFilterByType DEFLATE application/x-font-opentype
+  AddOutputFilterByType DEFLATE application/x-font-otf
+  AddOutputFilterByType DEFLATE application/x-font-truetype
+  AddOutputFilterByType DEFLATE application/x-font-ttf
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE font/opentype
+  AddOutputFilterByType DEFLATE font/otf
+  AddOutputFilterByType DEFLATE font/ttf
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE image/x-icon
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE text/plain
+</IfModule>
+<IfModule mod_gzip.c>
+  mod_gzip_on Yes
+  mod_gzip_dechunk Yes
+  mod_gzip_item_include file .(html?|txt|css|js|php|pl)$
+  mod_gzip_item_include handler ^cgi-script$
+  mod_gzip_item_include mime ^text/.*
+  mod_gzip_item_include mime ^application/x-javascript.*
+  mod_gzip_item_exclude mime ^image/.*
+  mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+</IfModule>
+<IfModule mod_headers.c>
+  <filesmatch "\.(ico|flv|jpg|jpeg|png|gif|css|swf)$">
+  Header set Cache-Control "max-age=2678400, public"
+  </filesmatch>
+  <filesmatch "\.(html|htm)$">
+  Header set Cache-Control "max-age=7200, private, must-revalidate"
+  </filesmatch>
+  <filesmatch "\.(pdf)$">
+  Header set Cache-Control "max-age=86400, public"
+  </filesmatch>
+  <filesmatch "\.(js)$">
+  Header set Cache-Control "max-age=2678400, private"
+  </filesmatch>
+</IfModule>
+###########################################################################
+#########################custom added code for pagespeed on 01-06-2015####################################################
